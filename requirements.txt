@@ -1,6 +1,6 @@
 # Neural Network Library - Python Dependencies
 # CSE473s: Computational Intelligence Fall 2025
-# Team: 9
+# Team: 8
 numpy>=1.21.0,<2.0.0
 matplotlib>=3.4.0,<4.0.0
 jupyter>=1.0.0

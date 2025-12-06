@@ -1,6 +1,8 @@
 # Neural Network Library - From Scratch
 
-A simple neural network library built with only NumPy for CSE473s: Computational Intelligence course project , Team : 9
+A simple neural network library built with only NumPy for :
+ CSE473s: Computational Intelligence course project ,
+ Team : 8
 
 ## What is this project?
 we build a complete neural network library without using any machine learning frameworks. We only use NumPy for mathematical operations and implement everything else ourselves - forward propagation, backpropagation, layers, activations, and optimizers.
