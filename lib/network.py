@@ -4,7 +4,7 @@ Implements Sequential model for stacking layers
 """
 
 import numpy as np
-
+import pickle
 
 class Sequential:
     def __init__(self):
@@ -100,3 +100,32 @@ class Sequential:
     def predict(self, X):
         
         return self.forward(X)
+    
+    def save(self, path):
+        """
+        Save full model: layers, loss function, optimizer
+        """
+        with open(path, "wb") as f:
+            pickle.dump({
+                "layers": self.layers,
+                "loss_function": self.loss_function,
+                "optimizer": self.optimizer
+            }, f)
+
+    @staticmethod
+    def load(path):
+        """
+        Load full model
+        """
+        with open(path, "rb") as f:
+            data = pickle.load(f)
+
+        model = Sequential()
+        model.layers = data["layers"]
+        model.loss_function = data["loss_function"]
+        model.optimizer = data["optimizer"]
+
+        return model
+    
+
+    
