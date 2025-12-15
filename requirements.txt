@@ -1,9 +1,16 @@
 # Neural Network Library - Python Dependencies
 # CSE473s: Computational Intelligence Fall 2025
 # Team: 8
-numpy>=1.21.0,<2.0.0
+
+# NumPy is already installed manually on Windows
+# numpy>=1.21.0,<2.0.0
+
 matplotlib>=3.4.0,<4.0.0
 jupyter>=1.0.0
 notebook>=6.4.0
 ipykernel>=6.0.0
 
+# TensorFlow - For MNIST dataset loading and comparison baseline
+# Includes Keras for high-level API
+tensorflow>=2.20.0,<2.21.0
+scikit-learn>=1.0.0,<2.0.0

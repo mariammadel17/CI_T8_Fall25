@@ -199,3 +199,43 @@ if difference < 1e-5:
 ---
 
 *This is Phase 1 of a 3-phase project. The library works correctly and is ready for the autoencoder implementation in Phase 2.*
+
+1. Our Library used SGD (learning_rate=0.005)
+   - Simple gradient descent with fixed learning rate
+   - Achieved loss of 0.01 with sharp reconstructions
+
+2. TensorFlow initially used identical SGD settings
+   - Converged to suboptimal solution (loss 0.07)
+   - Produced blurry reconstructions
+
+3. We switched TensorFlow to Adam optimizer (learning_rate=0.001)
+   - Adam uses adaptive learning rates per parameter
+   - Achieved comparable performance (loss ~0.01)
+   - Sharp reconstructions matching our library
+
+This demonstrates that:
+- Optimizer choice significantly impacts results
+- Adam is more robust for complex problems
+- Different initializations can lead to different local minima
+- Our library implementation successfully found a good solution"
+Bottom Line
+
+
+
+###  Autoencoder
+```python
+from lib import Dense, ReLU, Sigmoid, Sequential
+
+# Build autoencoder
+autoencoder = Sequential()
+
+# Encoder
+
+# Decoder
+
+
+# Train
+autoencoder.compile(loss=MSE(), optimizer=SGD(learning_rate=0.005))
+history = autoencoder.fit(X_train, X_train, epochs=100, batch_size=128)
+```
+

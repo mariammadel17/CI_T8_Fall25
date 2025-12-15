@@ -1,4 +1,4 @@
-__author__ = 'CSE473s Project Team 9'
+__author__ = 'CSE473s Project Team 8'
 
 from .layers import Layer, Dense
 from .activations import ReLU, Sigmoid, Tanh, Softmax
